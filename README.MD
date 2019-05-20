@@ -8,35 +8,35 @@ $ open https://cmake.org/
 
 ## Tasks
 
-- [ ] 1. Создать публичный репозиторий с названием **lab03** на сервисе **GitHub**
-- [ ] 2. Ознакомиться со ссылками учебного материала
-- [ ] 3. Выполнить инструкцию учебного материала
-- [ ] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
+- [x] 1. Создать публичный репозиторий с названием **lab03** на сервисе **GitHub**
+- [x] 2. Ознакомиться со ссылками учебного материала
+- [x] 3. Выполнить инструкцию учебного материала
+- [x] 4. Составить отчет и отправить ссылку личным сообщением в **Slack**
 
 ## Tutorial
 
 ```ShellSession
-$ export GITHUB_USERNAME=<имя_пользователя>
+$ export GITHUB_USERNAME=<имя_пользователя>  // экспорт имени пользователя
 ```
 
 ```ShellSession
 $ cd ${GITHUB_USERNAME}/workspace
-$ pushd .
-$ source scripts/activate
+$ pushd .  // сохраняем
+$ source scripts/activate // активируем скрипты
 ```
 
 ```ShellSession
-$ git clone https://github.com/${GITHUB_USERNAME}/lab02.git projects/lab03
+$ git clone https://github.com/${GITHUB_USERNAME}/lab02.git projects/lab03 //клонируем репозиторий
 $ cd projects/lab03
-$ git remote remove origin
-$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03.git
+$ git remote remove origin  //удалить удаленно origin
+$ git remote add origin https://github.com/${GITHUB_USERNAME}/lab03.git  //удаленно добавляет origin
 ```
 
 ```ShellSession
-$ g++ -std=c++11 -I./include -c sources/print.cpp
-$ ls print.o
-$ nm print.o | grep print
-$ ar rvs print.a print.o
+$ g++ -std=c++11 -I./include -c sources/print.cpp //сборка
+$ ls print.o  //выводит файл
+$ nm print.o | grep print  //символы ищутся, проверяются на соотв и печатаются
+$ ar rvs print.a print.o ..
 $ file print.a
 $ g++ -std=c++11 -I./include -c examples/example1.cpp
 $ ls example1.o
@@ -185,5 +185,9 @@ $ gistup -m "lab${LAB_NUMBER}"
 - [Основы сборки проектов на С/C++ при помощи CMake](https://eax.me/cmake/)
 - [CMake Tutorial](http://neerc.ifmo.ru/wiki/index.php?title=CMake_Tutorial)
 - [C++ Tutorial - make & CMake](https://www.bogotobogo.com/cplusplus/make.php)
-```
+- [Autotools](http://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html)
+- [CMake](https://cgold.readthedocs.io/en/latest/index.html)
 
+```
+Copyright (c) 2015-2019 The ISC Authors
+```
